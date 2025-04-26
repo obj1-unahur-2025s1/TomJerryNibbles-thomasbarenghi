@@ -1,0 +1,48 @@
+// testCase1.wtest
+import tom.tom
+import ratones.*
+
+describe "test case 1" {
+  test "la velocidad maxima de Tom es 10" {
+    assert.equals(10, tom.calcularVelocidadMaxima())
+  }
+  
+  test "tom come a jerry velocidad 15.2 y energia 102" {
+    tom.comerRaton(jerry)
+    assert.equals(15.2, tom.calcularVelocidadMaxima())
+    assert.equals(102, tom.getEnergia())
+  }
+  
+  test "la velocidad maxima de Tom es 14" {
+    tom.comerRaton(jerry)
+    tom.correr_Metros(24)
+    assert.equals(14, tom.calcularVelocidadMaxima())
+  }
+  
+  test "la velocidad maxima de Tom es 18.7" {
+    tom.comerRaton(jerry)
+    tom.correr_Metros(24)
+    tom.comerRaton(nibbles)
+    assert.equals(18.7, tom.calcularVelocidadMaxima())
+    assert.equals(137, tom.getEnergia())
+  }
+  
+  test "la velocidad maxima de Tom es 25.9" {
+    tom.comerRaton(jerry)
+    tom.correr_Metros(24)
+    tom.comerRaton(nibbles)
+    jerry.cumplirAnos()
+    tom.comerRaton(jerry)
+    assert.equals(25.9, tom.calcularVelocidadMaxima())
+  }
+  
+  test "la velocidad maxima de Tom es 24" {
+    tom.comerRaton(jerry)
+    tom.correr_Metros(24)
+    tom.comerRaton(nibbles)
+    jerry.cumplirAnos()
+    tom.comerRaton(jerry)
+    tom.correr_Metros(38)
+    assert.equals(24, tom.calcularVelocidadMaxima())
+  }
+}

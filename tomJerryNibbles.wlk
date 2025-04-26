@@ -1,13 +1,13 @@
-object tom {
+// object tom {
 
-}
+// }
 
-object jerry {
+// object jerry {
   
-}
+// }
 
-object nibbles {
+// object nibbles {
   
-}
+// }
 
-// Inventar otro ratón
+// // Inventar otro ratón

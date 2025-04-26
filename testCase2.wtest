@@ -1,0 +1,18 @@
+import tom.tom
+import ratones.*
+
+describe "test case 2" {
+  test "Tom caza a Jerry a 10 metros" {
+    tom.cazarUnRaton(jerry, 10)
+    assert.equals(97, tom.getEnergia())
+    assert.equals(10, tom.getDistanciaRecorrida())
+    assert.equals(jerry, tom.getUltimoRatonComido())
+  }
+  
+  test "Tom caza a Nibbles a 10 metros" {
+    tom.cazarUnRaton(nibbles, 10)
+    assert.equals(92, tom.getEnergia())
+    assert.equals(10, tom.getDistanciaRecorrida())
+    assert.equals(nibbles, tom.getUltimoRatonComido())
+  }
+}
